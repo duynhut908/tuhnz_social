@@ -1,0 +1,22 @@
+.mess_container {
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: calc(100% - 80px);
+    overflow: hidden;
+}
+
+.leftmess,
+.rightmess {
+    max-height: 100%;
+}
+
+.leftmess {
+    flex: 2;
+    overflow: hidden;
+}
+
+.rightmess {
+    flex: 5;
+}
+

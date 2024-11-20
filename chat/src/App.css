@@ -1,0 +1,129 @@
+body.light-mode {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --button-background-light: #f0f0f0;
+  --button-text-light: #000000;
+  --svg-fill-light: #000000;
+}
+
+body.dark-mode {
+  /* Thiết lập các biến CSS cho chế độ tối */
+  --background-color-dark: #121212;
+  --text-color-dark: #ffffff;
+  --button-background-dark: #333333;
+  --button-text-dark: #ffffff;
+  --svg-fill-dark: #ffffff;
+}
+
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: all 0.3s ease;
+  /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+button {
+  background-color: var(--button-background-light);
+  color: var(--button-text-light);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+svg {
+  fill: var(--svg-fill-light);
+  /* Màu của SVG trong chế độ sáng */
+  transition: fill 0.3s ease;
+  /* Thêm hiệu ứng chuyển màu cho SVG */
+}
+
+input {
+  color: var(--text-color-light);
+}
+
+body.dark-mode input {
+  color: var(--button-text-dark);
+}
+
+body.dark-mode svg {
+  fill: var(--svg-fill-dark);
+  /* Màu của SVG trong chế độ tối */
+}
+
+/* Khi có class 'dark-mode' trên body, áp dụng các màu tối */
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark-mode button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-dark);
+}
+
+
+.app-container {
+  display: flex;
+  width: 100%;
+  /* Chiếm toàn bộ chiều rộng của phần tử cha */
+  height: 100vh;
+  /* Chiếm toàn bộ chiều cao màn hình */
+}
+
+.leftbar {
+  width: 80px;
+}
+
+.contentbar {
+  flex: 1;
+  margin-left: 80px;
+}
+
+.none-author {
+  display: flex;
+  width: 100%;
+  /* Chiếm toàn bộ chiều rộng của phần tử cha */
+  height: 100vh;
+  /* Chiếm toàn bộ chiều cao màn hình */
+  position: fixed;
+}
+
+.none-author .banner {
+  width: 35vw;
+}
+
+.none-author .view-guest {
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+  background-image: url('https://i.pinimg.com/736x/1a/69/84/1a698499a06d75ac4b591c30251cfca4.jpg');
+  background-size: cover;
+  /* Làm cho hình ảnh phủ toàn bộ banner */
+  background-position: center;
+  /* Đặt hình ảnh ở giữa */
+  background-repeat: no-repeat;
+  /* Giảm kích thước của phần leftmess để tận dụng không gian còn lại */
+}
+
+.none-author .view-guest::-webkit-scrollbar {
+  display: none;
+  /* Không hiển thị thanh cuộn */
+}
+
+@media (max-width:900px) {
+  .none-author .banner {
+    display: none;
+    /* Ẩn phần 'right' khi chiều rộng màn hình nhỏ hơn 60% */
+  }
+
+  .none-author .view-guest {
+    flex: 1;
+  }
+  
+}

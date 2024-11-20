@@ -1,0 +1,123 @@
+.leftbar {
+  width: 80px;
+  height: 100vh;
+  color: white;
+  position: fixed;
+  padding: 0px 0px 20px;
+  box-shadow: 2px 0 5px rgba(104, 104, 104, 0.1);
+  z-index: 1000; /* Đảm bảo Leftbar không bị che khuất */
+  transform: none; /* Đảm bảo không bị scale ảnh hưởng */
+  will-change: transform; /* Tối ưu hiệu suất khi thay đổi */
+}
+html {
+  zoom: 100%; /* Giữ nguyên kích thước mặc định */
+}
+.leftbar-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.leftbar-menu ul {
+  display: flex;
+  overflow-y: auto;
+  /* Sử dụng flexbox */
+  flex-direction: column;
+  /* Căn các phần tử theo chiều dọc */
+  list-style-type: none;
+  padding-inline-start: 0;
+  justify-content: space-evenly;
+}
+
+.leftbar .leftbar-menu ul::-webkit-scrollbar {
+  display: none;
+  /* Không hiển thị thanh cuộn */
+}
+
+.leftbar-menu ul li {
+  display: flex;
+  width: 70%;
+  height: 70%;
+  margin: 18% 15%;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  justify-content: center;
+  /* Căn giữa theo chiều ngang */
+  outline: 2px solid transparent;
+  /* Viền trong suốt xung quanh phần tử */
+}
+
+.leftbar-menu ul li:hover:not(.active) {
+  transform: scale(1.5);
+}
+
+.leftbar-menu ul li:active {
+  transform: scale(1.5);
+}
+
+.leftbar-menu ul li svg.active {
+  fill: rgb(55, 195, 255);
+  transform: scale(1.5);
+}
+
+.leftbar-menu ul li svg.mode:active {
+  fill: rgb(55, 195, 255);
+}
+
+.fixed-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 18%;
+}
+
+.toggle-mode {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.light-mode .toggle-btn, .dark-mode .toggle-btn {
+  width: 40px;
+  margin: 15%;
+  display: flex;
+  border-radius: 99px;
+  height: 15px;
+
+  background-color: rgb(0, 0, 0);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.748);
+  position: relative;
+}
+
+.light-mode .toggle-btn .thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 99px;
+  position: absolute;
+  transform: translateY(-50%);
+  fill: rgb(255, 255, 255);
+  transition: left 0.3s ease;
+  
+  right: 22px;
+}
+
+.dark-mode .toggle-btn .thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 99px;
+  position: absolute;
+  transform: translateY(-50%);
+  fill: rgb(0, 0, 0);
+  transition: right 0.3s ease;
+}
+
+.dark-mode .toggle-btn {
+  background-color: rgb(255, 255, 255);
+}

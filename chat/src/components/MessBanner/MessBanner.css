@@ -1,0 +1,13 @@
+.mess-banner{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(104, 104, 104, 0.1);
+}
+
+.mess-banner .title-mess-banner {
+    font-size: 20px;
+    font-weight: 650;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,58 @@
+.message-card {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.avatar-last-mess {
+    width: 2.2rem;
+    height: 2.2rem;
+    /* Bo tròn để tạo thành hình tròn */
+    overflow: hidden;
+    /* Ẩn phần ảnh thừa ra ngoài khung */
+    position: relative;
+    border-radius: 50%;
+    align-self: flex-end;
+}
+
+.avatar-last-mess img {
+    position: absolute;
+    /* Đặt ảnh vào vị trí tuyệt đối */
+    top: 50%;
+    /* Đưa ảnh lên giữa theo chiều dọc */
+    left: 50%;
+    /* Đưa ảnh lên giữa theo chiều ngang */
+    width: 100%;
+    /* Chiều rộng 100% của container */
+    height: 100%;
+    /* Chiều cao 100% của container */
+    object-fit: cover;
+    /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+    transform: translate(-50%, -50%);
+    /* Căn giữa ảnh */
+}
+
+.message-sent,
+.message-received {
+    display: inline-block;
+    max-width: 65%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 5px rgba(104, 104, 104, 0.1);
+    font-weight: 450;
+}
+
+.message-sent {
+    background-color: rgb(44, 54, 201);
+    margin-left: auto;
+    color: white;
+}
+
+.message-received {
+    background-color: rgb(187, 225, 236);
+    margin-right: auto;
+    color: black;
+}

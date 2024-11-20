@@ -1,0 +1,142 @@
+.view-guest-1 {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.register {
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.heading-web {
+    position: relative; 
+    font-size: 50px;
+    height: 4rem;
+    font-weight: 650;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 8%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(104, 104, 104, 0.1);
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+    z-index: 10; /* Đảm bảo phần tử này không bị che bởi các phần tử khác */
+}
+
+.heading-web .heading-web-name {
+    flex: 1;
+}
+
+.form-login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-login input {
+    font-size: 0.8rem;
+    border: 1px solid rgb(94, 94, 94);
+    /* Thêm viền màu xám với độ rộng 2px */
+    margin-right: 10px;
+    padding: 12px;
+    width: 350px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+    border-radius: 4px;
+    /* Làm mềm các góc của viền */
+}
+
+.form-login button {
+    width: 200px;
+}
+
+.form-login .forgot-account {
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: rgb(64, 181, 253);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.form-login .note-reg {
+    width: 350px;
+    font-size: 0.7rem;
+    color: rgb(64, 181, 253);
+    cursor: pointer;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-weight: 450;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.divider {
+    width: 25vw;
+    border: none;
+    border-top: 1px solid rgb(167, 167, 167);
+    /* Đường kẻ mỏng màu xám nhạt */
+    margin: 2vh 0;
+    /* Khoảng cách giữa hai phần */
+}
+
+.support-account {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-web {
+    width: 10rem;
+    height: 10rem;
+    /* Bo tròn để tạo thành hình tròn */
+    overflow: hidden;
+    /* Ẩn phần ảnh thừa ra ngoài khung */
+    position: relative;
+    border-radius: 50%;
+}
+
+
+.avatar-web img {
+    position: absolute;
+    /* Đặt ảnh vào vị trí tuyệt đối */
+    top: 50%;
+    /* Đưa ảnh lên giữa theo chiều dọc */
+    left: 50%;
+    /* Đưa ảnh lên giữa theo chiều ngang */
+    width: 100%;
+    /* Chiều rộng 100% của container */
+    height: 100%;
+    /* Chiều cao 100% của container */
+    object-fit: cover;
+    /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+    transform: translate(-50%, -50%);
+    /* Căn giữa ảnh */
+}

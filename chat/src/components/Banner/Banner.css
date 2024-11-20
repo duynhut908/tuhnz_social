@@ -1,0 +1,20 @@
+.banner {
+    width: 35vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 0 5px rgba(104, 104, 104, 0.1);
+    background-image: url('https://i.pinimg.com/564x/3a/2b/58/3a2b580c44dcfb49f3e45fd9181c4c50.jpg');
+    background-size: cover;
+    /* Làm cho hình ảnh phủ toàn bộ banner */
+    background-position: center;
+    /* Đặt hình ảnh ở giữa */
+    background-repeat: no-repeat;
+}
+
+.banner .heading {
+    font-size: 20px;
+    font-weight: 650;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
