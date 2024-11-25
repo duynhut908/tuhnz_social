@@ -14,7 +14,7 @@ const MessLeft = ({ setRoom, room, socket }) => {
                 return res.data;
             })
     })
-    console.log(data)
+    
     return (
         <div className='mess-left'>
             <div className='heading-mess-left'>Messages</div>

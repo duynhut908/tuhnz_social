@@ -11,7 +11,7 @@ const MessDialog = ({ setRoom, room, roomChat }) => {
     const handleSetRoom = () => {
         setRoom(roomChat)
     }
-    console.log(roomChat)
+    
 
     const { isLoading, error, data } = useQuery({
         queryKey: ["dialog", roomChat], queryFn: () =>

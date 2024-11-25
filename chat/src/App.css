@@ -76,13 +76,12 @@ body.dark-mode button {
   /* Chiếm toàn bộ chiều cao màn hình */
 }
 
-.leftbar {
-  width: 80px;
+.left-bar {
+  width: 80px;position: static;
 }
 
 .contentbar {
-  flex: 1;
-  margin-left: 80px;
+  flex: 1;position: static;
 }
 
 .none-author {

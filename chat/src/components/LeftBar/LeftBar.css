@@ -5,9 +5,10 @@
   position: fixed;
   padding: 0px 0px 20px;
   box-shadow: 2px 0 5px rgba(104, 104, 104, 0.1);
-  z-index: 1000; /* Đảm bảo Leftbar không bị che khuất */
+  /* z-index: 999; Đảm bảo Leftbar không bị che khuất */
   transform: none; /* Đảm bảo không bị scale ảnh hưởng */
   will-change: transform; /* Tối ưu hiệu suất khi thay đổi */
+  z-index: 1000;
 }
 html {
   zoom: 100%; /* Giữ nguyên kích thước mặc định */
@@ -79,7 +80,7 @@ html {
   margin-top: auto;
   display: flex;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .light-mode .toggle-btn, .dark-mode .toggle-btn {

@@ -1,0 +1,70 @@
+.posts-container {
+    height: 100%;
+    width: 100%;
+    padding: 0.84rem;
+    gap: 0.84rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.posts-list {
+    height: 100%;
+    width: 100%;
+    gap: 0.84rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts-selected {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.heading-detail-post {
+    height: 3.2rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 0.3rem;
+    box-shadow: 0 4px 6px rgba(104, 104, 104, 0.1);
+}
+.heading-detail-post .previous-post{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.heading-detail-post .previous-post .item-previous-post{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.heading-detail-post .name-user-post{
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+    position: absolute;
+}
+.body-detail-post {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+}
+
+
+.body-detail-post::-webkit-scrollbar {
+    width: 8px;
+}
+
+.body-detail-post::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-bg, transparent);
+    /* Đặt nền thanh cuộn là transparent hoặc màu của phần tử cha */
+}
+
+.body-detail-post::-webkit-scrollbar-thumb {
+    background-color: rgb(162, 162, 162);
+    /* Màu thanh trượt */
+    border: 2px solid transparent;
+}

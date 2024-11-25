@@ -4,7 +4,7 @@ import './Message.css'
 
 const Message = ({ mess }) => {
   const { currentUser } = useContext(AuthContext)
-  console.log(mess)
+  
   const typemess = mess?.username === currentUser?.username ? 'sent' : 'received';
 
   return (

@@ -16,7 +16,6 @@ const ViewGuest = ({ handleGuest }) => {
     const { login, currentUser} = useContext(AuthContext);
     useEffect(() => {
         if (currentUser) {
-            // Người dùng đã đăng nhập thành công
             console.log("Người dùng đã đăng nhập:", currentUser);
         }
     }, [currentUser]);
@@ -48,9 +47,7 @@ const ViewGuest = ({ handleGuest }) => {
                     <div className='heading-web'>
                         <div className='heading-web-name'>TUHNZ</div>
                     </div>
-                    {/* <div className='avatar-web'>
-            <img src="https://i.pinimg.com/736x/0a/1c/37/0a1c37b332ac2ab84db55464a8e81e9a.jpg" />
-        </div> */}
+                 
                     <div className='form-login'>
                         <input type="text" placeholder="Email address or Username" name="username" onChange={handleChange} />
                         <input type="text" placeholder="Password" name="password" onChange={handleChange} />

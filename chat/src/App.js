@@ -20,12 +20,15 @@ import ViewGuest from './pages/VỉewGuest/ViewGuest';
 import { io } from "socket.io-client";
 import { AuthContext } from './context/authContext';
 import { makeRequest } from './axios';
+import SearchForm from './components/Search/Search';
+import FloatingIcon from './components/FloatingIcon/FloatingIcon';
+import MenuMore from './components/MenuMore/MenuMore';
 
 function App() {
 
   const { handleLogout, currentUser } = useContext(AuthContext);
   const [user, setUser] = useState('');
-  const [socket, setSocket] = useState(null); 
+  const [socket, setSocket] = useState(null);
 
   useEffect(() => {
     // Khởi tạo socket khi component mount
@@ -36,7 +39,7 @@ function App() {
     };
   }, []); // Chỉ chạy một lần khi component mount
 
-  console.log(socket)
+  
   useEffect(() => {
     if (socket) {
       socket.emit("login", currentUser?.username);
@@ -91,15 +94,33 @@ function App() {
   }
 
   const [author, setAuthor] = useState(true);
+
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuMoreOpen, setIsMenuMoreOpen] = useState(false);
+
+  const toggleSearchForm = () => {
+    isMenuMoreOpen && setIsMenuMoreOpen(!isMenuMoreOpen)
+    setIsSearchOpen(!isSearchOpen);
+  };
+
+
+  const toggleMenuMoreForm = () => {
+    isSearchOpen && setIsSearchOpen(!isSearchOpen)
+    setIsMenuMoreOpen(!isMenuMoreOpen);
+  };
+
   const Layout = () => {
     return (
       <div>
         <QueryClientProvider client={queryClient}>
           {currentUser && user.trim() !== '' ?
             <div className='app-container'>
-              <div className='leftbar'>
-                <LeftBar toggleTheme={toggleTheme} selected={selected} setSelected={setSelected} /></div>
+              <div className='left-bar'>
+                <LeftBar toggleTheme={toggleTheme} selected={selected} setSelected={setSelected} toggleSearchForm={toggleSearchForm} isSearchOpen={isSearchOpen} toggleMenuMoreForm={toggleMenuMoreForm} isMenuMoreOpen={isMenuMoreOpen} /></div>
+              <FloatingIcon />
               <div className='contentbar'>
+                {isSearchOpen && <SearchForm isSearchOpen={isSearchOpen} toggleSearchForm={toggleSearchForm} />}
+                {isMenuMoreOpen && <MenuMore isMenuMoreOpen={isMenuMoreOpen} toggleMenuMoreForm={toggleMenuMoreForm} />}
                 <Outlet /></div>
             </div> :
 
@@ -116,7 +137,7 @@ function App() {
       </div>
     )
   }
-  console.log(currentUser, user)
+  
   const ProtectedRoute = ({ children }) => {
     useEffect(() => {
       const auth = async () => {
@@ -154,6 +175,10 @@ function App() {
       children: [
         {
           path: "/",
+          element: <Home />
+        },
+        {
+          path: "/post/:postId",
           element: <Home />
         },
         {

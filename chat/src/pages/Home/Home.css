@@ -1,0 +1,78 @@
+.home_container {
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: calc(100% - 80px);
+    overflow: hidden;
+}
+
+.main-home {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-width: 100%;
+    /* Sử dụng flex để sắp xếp các phần tử bên trong */
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.main-home::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-home::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-bg, transparent);
+    /* Đặt nền thanh cuộn là transparent hoặc màu của phần tử cha */
+}
+
+.main-home::-webkit-scrollbar-thumb {
+    background-color: rgb(162, 162, 162);
+    /* Màu thanh trượt */
+    border: 2px solid transparent;
+}
+
+.lefthome,
+.righthome {
+    height: 100%;
+    max-height: 100%;
+}
+
+.lefthome {
+    flex: 2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.lefthome-drop {
+    width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.righthome {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.toprighthome {
+    height: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botrighthome {
+    flex: 1;
+    overflow: hidden;
+}

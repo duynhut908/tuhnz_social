@@ -1,0 +1,46 @@
+.story-container{
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem;
+    border-radius: 10px; 
+    flex-direction: column;
+    width: 80px;
+    min-width: 80px;
+    justify-content: space-between;
+}
+
+.story-container .avatar-story-dialog{
+    width: 2.3rem;
+    height: 2.3rem;
+    /* Bo tròn để tạo thành hình tròn */
+    overflow: hidden;
+    /* Ẩn phần ảnh thừa ra ngoài khung */
+    position: relative;
+    border-radius: 50%;
+    border: 1.5px solid rgb(0, 55, 255);
+}
+
+.story-container .avatar-story-dialog img{
+    position: absolute;
+    /* Đặt ảnh vào vị trí tuyệt đối */
+    top: 50%;
+    /* Đưa ảnh lên giữa theo chiều dọc */
+    left: 50%;
+    /* Đưa ảnh lên giữa theo chiều ngang */
+    width: 100%;
+    /* Chiều rộng 100% của container */
+    height: 100%;
+    /* Chiều cao 100% của container */
+    object-fit: cover;
+    /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+    transform: translate(-50%, -50%);
+    /* Căn giữa ảnh */
+}
+.story-container .name-story-dialog{
+    white-space: nowrap;           /* Ngăn không cho xuống dòng */
+    overflow: hidden;              /* Ẩn phần nội dung vượt ra ngoài */
+    text-overflow: ellipsis;       /* Hiển thị dấu 3 chấm khi không đủ không gian */
+    width: 100%;    
+    font-size: 0.8rem;  
+    text-align: left;  
+}

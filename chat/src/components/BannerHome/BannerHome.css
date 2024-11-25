@@ -1,0 +1,31 @@
+.banner-home {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    box-shadow: 0 4px 6px rgba(104, 104, 104, 0.1);
+    gap: 0.5rem;
+}
+
+.heading-banner-home {
+    font-size: 1.5rem;
+    flex: 1;
+    display: flex;
+    padding: 0 1.04rem;
+    align-items: center;
+}
+
+.new-post {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.tool-banner-home{
+    align-items: center;
+    gap:20px;
+    display: flex;
+    padding: 0 1.04rem;
+}
+
+.item-banner-home{
+    cursor: pointer;
+}

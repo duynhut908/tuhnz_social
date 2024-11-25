@@ -1,0 +1,155 @@
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comments-container .up-comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.comments-container .up-comment .input-up-comment {
+    display: flex;
+    height: 1.4rem;
+    padding: 5px 10px;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 0.5px solid gray;
+}
+
+.comments-container .up-comment .input-up-comment input {
+    flex: 1;
+    font-size: 0.85rem;
+    border: none;
+    margin-right: 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+}
+
+.comments-container .up-comment .tool-up-comment {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0.2rem;
+}
+
+.comments-container .up-comment .tool-up-comment .tool-attach-comment {
+    display: flex;
+    gap: 15px;
+}
+
+.comments-container .up-comment .tool-up-comment .post-comment {
+    display: flex;
+    gap: 15px;
+}
+
+.comments-container .up-comment .tool-up-comment .post-comment select {
+    background: transparent;
+    width: 80px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.dark-mode .comments-container .up-comment .tool-up-comment .post-comment select {
+    color: white;
+}
+
+.dark-mode .comments-container .up-comment .tool-up-comment .post-comment option {
+    background: black;
+}
+
+.comments-container .list-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.comments-container .list-comments .a-comment {
+    display: flex;
+    gap: 10px;
+}
+
+.comments-container .list-comments .a-comment .avatar-user-comment {
+    width: 2.2rem;
+    height: 2.2rem;
+    /* Bo tròn để tạo thành hình tròn */
+    overflow: hidden;
+    /* Ẩn phần ảnh thừa ra ngoài khung */
+    position: relative;
+    border-radius: 50%;
+    align-self: flex-start;
+}
+
+.comments-container .list-comments .a-comment .avatar-user-comment img {
+    position: absolute;
+    /* Đặt ảnh vào vị trí tuyệt đối */
+    top: 50%;
+    /* Đưa ảnh lên giữa theo chiều dọc */
+    left: 50%;
+    /* Đưa ảnh lên giữa theo chiều ngang */
+    width: 100%;
+    /* Chiều rộng 100% của container */
+    height: 100%;
+    /* Chiều cao 100% của container */
+    object-fit: cover;
+    /* Đảm bảo ảnh lấp đầy container mà không bị méo */
+    transform: translate(-50%, -50%);
+    /* Căn giữa ảnh */
+}
+
+.comments-container .list-comments .a-comment .detail-comment {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.comments-container .list-comments .a-comment .detail-comment .content-comment {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.comments-container .list-comments .a-comment .detail-comment .content-comment .comment-name-link {
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    color: rgb(69, 147, 221);
+    /* Màu sắc mặc định */
+    font-weight: bold;
+    font-size: 15px;
+    /* Chữ đậm */
+}
+
+.comments-container .list-comments .a-comment .detail-comment .content-comment span{
+   font-size: 13px;
+}
+.comments-container .list-comments .a-comment .detail-comment .interact-time-comment {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comments-container .list-comments .a-comment .detail-comment .interact-time-comment .time-comment {
+    font-size: 12px;
+    color: gray;
+}
+
+.comments-container .list-comments .a-comment .detail-comment .interact-time-comment .interact-comment {
+    display: flex;
+    gap: 20px;
+}
+
+.comments-container .list-comments .a-comment .detail-comment .interact-time-comment .interact-comment .item-interact-comment{
+    display: flex;
+    gap: 5px;
+}
+
+.comments-container .list-comments .a-comment .detail-comment .interact-time-comment .interact-comment .item-interact-comment span{
+    font-size: 10px;
+}
+

@@ -26,7 +26,6 @@ const Messages = ({ socket }) => {
         };
     }, []);
 
-console.log(room)
     return (
         <div>
             {isLargeScreen ?

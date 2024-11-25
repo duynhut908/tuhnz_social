@@ -1,0 +1,61 @@
+/* Icon button */
+.floating-icon {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4ca3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.floating-icon .clicked {
+  fill:blue
+}
+
+/* Tab content */
+.floating-tab {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+  /* Ẩn tab ban đầu */
+  z-index: 1001;
+}
+
+.floating-tab.open {
+  display: block;
+  /* Hiển thị tab khi mở */
+}
+
+.floating-tab h4 {
+  margin: 0 0 1rem;
+  font-size: 18px;
+}
+
+.floating-tab button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.floating-tab button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,40 @@
+.stories-container {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(104, 104, 104, 0.1);
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.stories-container .heading-story {
+    font-size: 1.5rem;
+    display: flex;
+    height: 4rem;
+    padding: 0 1.04rem;
+    align-items: center;
+}
+
+.stories-container .list-stories {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    gap: 5px; overflow-x: auto;  /* Ẩn thanh cuộn ngang */
+    overflow-y: auto;  /* Ẩn thanh cuộn dọc */
+}
+.stories-container .list-stories::-webkit-scrollbar {
+    display: none;
+    /* Không hiển thị thanh cuộn */
+  }
+
+.stories-container .list-stories .scroll-btn {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}

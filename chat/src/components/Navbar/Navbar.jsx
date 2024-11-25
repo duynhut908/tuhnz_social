@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const Navbar = () => {
     return (
         <div className='navbar'>
-            Đây là trang Nabar
+            Đây là trang Navbar
         </div>
       );
 }
